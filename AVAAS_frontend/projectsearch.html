@@ -1,0 +1,56 @@
+<html>
+<head>
+Projects open to Bidding 
+</head>
+
+
+<body>
+ <h1>Welcome</h1>
+   
+
+    <table border="1" >
+        <thead> 
+           <tr>
+               
+               <th>Name</th>
+               <th>Location</th>
+               <th>Size</th>
+               <th>Otherdetails</th>
+               
+           </tr>
+           </thread>
+            
+                  <tbody> 
+           {% for row in value %}  
+               <tr> 
+                   <td>{{row[0]}}</td> 
+                   <td>{{row[1]}}</td> 
+                   <td>{{row[2]}}</td>
+
+                 
+                   <td>
+                    <a href="/putbid/{{row[3]}}">Other details</a></td>
+                
+                    
+                    
+               </tr> 
+           {% endfor %} 
+       </tbody> 
+              
+       </table>
+   
+
+
+    <br/><br/><br/><br/><br/><br/><br/>
+    <form action="/projectsort" method ="POST">
+        <input type ="text" name="locname">
+        <input type="submit"  name = "submit_button" value ="Filter by location"><br/> 
+        
+        <h1>Pyhton mein iska code nahi likha hai abhi</h1>
+    </form>
+    
+  
+
+</body>
+
+</html>
